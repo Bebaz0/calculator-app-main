@@ -1,0 +1,54 @@
+
+body{
+    font-family: 'League Spartan', sans-serif;
+    background-color: #3b4563;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    margin: 5vh 18vb;
+}
+
+.header h1{
+    font-size: 1.5rem;
+}
+
+.themes{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;}
+
+.theme-label{
+    margin-top: 4rem;
+    font-size: 0.7rem;
+}
+.theme-slider{
+    display: flex;
+    flex-direction: column;
+    max-width: 100px
+}
+
+
+#themeRange{
+    width: 70px;
+    height: 22px;
+    appearance: none;
+    background: #232c43;
+    border-radius: 12px;
+    outline: none;
+    cursor: pointer;
+}
+
+.theme-options{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-left: 5px
+}
+
+
