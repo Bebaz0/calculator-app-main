@@ -1,9 +1,67 @@
+:root{
+    /*Theme 1*/
+    --primary-color: #3b4462;
+    --secondary-color: #181f32;
+    --third-color: #252d42;
+    --text-color: white;
+    --button-color: #e8e1d9;
+    --button-text-color: #454a58;
+    --button-active-color: #fdfdfd;
+    --button-shadow: rgba(133, 126, 128, 0.93);
+    --del-color: #637198;
+    --del-active-color: #a0b2df;
+    --del-shadow: rgb(63, 76, 112);
+    --equals-color: rgb(207, 63, 48);
+    --equals-active-color: rgb(247, 107, 90);
+    --equals-shadow: rgb(121, 43, 39);
+    --equals-text: white;
+}
+
+[data-theme="2"]{
+    /*Theme 2*/
+    --primary-color: #e4e4e4;
+    --secondary-color: #ececec;
+    --third-color: #d1cbcb;
+    --text-color: #32322a;
+    --button-color: #e3e2de;
+    --button-text-color: #37372d;
+    --button-active-color: #fdfdfd;
+    --button-shadow: rgb(166, 156, 144);
+    --del-color: #388086;
+    --del-active-color: #61b4bc;
+    --del-shadow: rgb(30, 96, 105);
+    --equals-color: #c65301;
+    --equals-active-color: #fd8a38;
+    --equals-shadow: rgb(138, 58, 2);
+    --equals-text: #ffffff;
+}
+
+[data-theme="3"]{
+    /*Theme 3*/
+    --primary-color: #17062a;
+    --secondary-color: #1e0836;
+    --third-color: #1e0836;
+    --text-color: #f9e441;
+    --button-color: #331b4c;
+    --button-text-color: #fde351;
+    --button-active-color: #6a34ab;
+    --button-shadow: rgb(132, 29, 156);
+    --del-color: #55077b;
+    --del-active-color: #8531af;
+    --del-shadow: rgb(185, 23, 240);
+    --equals-color: #00dccd;
+    --equals-active-color: #93fdf7;
+    --equals-shadow: rgb(107, 246, 237);
+    --equals-text: #033537;
+}
+
+
 
 body{
     font-family: 'League Spartan', sans-serif;
-    background-color: #3b4563;
+    background-color: var(--primary-color);
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 .header{
@@ -16,7 +74,7 @@ body{
 }
 
 .header h1{
-    margin-top: 6vh;
+    margin-top: 6.5vh;
     font-size: 1.5rem;
 }
 
@@ -30,9 +88,8 @@ body{
     font-size: 0.7rem;
 }
 .theme-slider{
-    display: flex;
-    flex-direction: column;
-    max-width: 100px
+    max-width: 100px;
+    margin-top: 0.5rem;
 }
 
 
@@ -40,7 +97,7 @@ body{
     width: 70px;
     height: 22px;
     appearance: none;
-    background: #232c43;
+    background: var(--secondary-color);
     border-radius: 12px;
     outline: none;
     cursor: pointer;
@@ -50,7 +107,9 @@ body{
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    margin-left: 5px
+    margin-left: 5px;
+    margin-top: 5px;
+    height: 38px;
 }
 
 .calculator{
@@ -66,7 +125,7 @@ body{
 .display{
     width: 100%;
     height: 12vh;
-    background-color: #181f32;
+    background-color: var(--secondary-color);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -81,14 +140,14 @@ body{
     margin-top: 20px;
     height: 40vh;
     width: 95%;
-    background-color: #252d43;
+    background-color: var(--third-color);
     padding: 5%;
     border-radius: 12px;
 }
 
 .button{
-    background-color: #e8e1d9;
-    color: #464b59;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
     border-radius: 12px;
     border-top: none;
     border-left: none;
@@ -97,49 +156,47 @@ body{
     font-weight: 700;
     cursor: pointer;
     transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
-    box-shadow: 0 0 0 1px rgba(133, 126, 128, 0.93);
+    box-shadow: 0 0 0 1px var(--button-shadow);
 }
 
 .button:active {
-    background-color: #fdfdfd;
-    color: #252d43;
+    background-color: var(--button-active-color);
 }
 
 .delete {
     font-size: 1.5rem;
-    background-color: #637198;
-    color: #f9fdfd;
-    box-shadow: 0px 1px 0 1px rgb(64, 77, 113)
+    background-color: var(--del-color);
+    color: white;
+    box-shadow: 0px 1px 0 1px var(--del-shadow);
 }
 
 .delete:active {
-    background-color: #a0b2df;
-    color: #f9fcfd;
+    background-color: var(--del-active-color);
 }
 
 .reset{
     font-size: 1.5rem;
-    background-color: #637198;
+    background-color: var(--del-color);
     color: #f9fdfd;
-    box-shadow: 0px 1px 0 1px rgb(64, 77, 113);
+    box-shadow: 0px 1px 0 1px var(--del-shadow);
     grid-column: span 2;
 }
 
 .reset:active {
-    background-color: #a0b2df;
-    color: #f9fcfd;
+    background-color: var(--del-active-color);
 }
 
 .equals{
     width: 100%;
     grid-column: span 2;
-    background-color: rgb(207, 63, 48);
-    color: white;
+    background-color: var(--equals-color);
+    color: var(--equals-text);
+    box-shadow: 0 0 0 2px var(--equals-shadow);
 }
 
 .equals:active{
-    background-color: rgb(247, 107, 90);
-    color: white;
+    background-color: var(--equals-active-color);
+    color: var(--equals-text);
 }
 
 
